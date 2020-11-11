@@ -1,7 +1,7 @@
 const CoffeePod = require('../database/models/CoffeePod');
 const coffeePods = require('../database/seeds/coffeePodData')
 module.exports = {
-    seedPodMachine: async (req, res) => {
+    store: async (req, res) => {
         try {
             for (coffeepod of coffeePods) {
                 var newCoffeePod = new CoffeePod(coffeepod)

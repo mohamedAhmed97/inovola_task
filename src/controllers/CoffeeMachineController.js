@@ -1,7 +1,7 @@
 const CoffeeMachine = require('../database/models/CoffeeMachine');
 const coffeeMachines = require('../database/seeds/coffeeMachineData')
 module.exports = {
-    seedCoffeeMachine: async (req, res) => {
+    store: async (req, res) => {
         try {
             for (coffemachine of coffeeMachines) {
                 var newCoffeMachine = new CoffeeMachine(coffemachine)

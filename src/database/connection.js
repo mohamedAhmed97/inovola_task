@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/inovola',
+mongoose.connect(process.env.DB_HOST,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
