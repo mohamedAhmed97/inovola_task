@@ -23,7 +23,7 @@ module.exports = {
             //get data
             const coffeePods = await CoffeePod.find(match);
             if (!coffeePods) {
-                throw new Error("404")
+                throw new Error("No Coffee Pods have this values")
             }
             //convert to array
             arr = []

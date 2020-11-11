@@ -21,18 +21,15 @@ module.exports = {
             }
             const coffeeMachines = await CoffeeMachine.find(match);
             if (!coffeeMachines) {
-                throw new Error("404")
+                throw new Error("No Coffee Machine have this values")
             }
             arr = []
-            for (coffeeMachine in coffeeMachines){
+            for (coffeeMachine in coffeeMachines) {
                 arr.push(coffeeMachines[coffeeMachine].code)
+            }
+            res.send({ arr, coffeeMachines })
+        } catch (error) {
+            res.send(error)
         }
-        res.send({
-            "arrays": arr,
-            "array of obj": coffeeMachines
-        })
-    } catch(error) {
-        res.send(error)
     }
-}
 }

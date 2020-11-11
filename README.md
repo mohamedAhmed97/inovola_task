@@ -53,6 +53,8 @@ For Coffee Pods:
         -pack_size
     Ex:localhost:3000/api/coffee-pods?product_type=espresso pod&coffee_flavor=caramel
 ---------------------------------------------------------------------------------------------------
+Note : I Made Response Two Types : type array and type array of objects because i didn't understand what the response which you need
+            
                                         Thanks    
 
 
