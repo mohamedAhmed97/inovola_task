@@ -27,7 +27,10 @@ module.exports = {
             for (coffeeMachine in coffeeMachines){
                 arr.push(coffeeMachines[coffeeMachine].code)
         }
-            res.send(arr)
+        res.send({
+            "arrays": arr,
+            "array of obj": coffeeMachines
+        })
     } catch(error) {
         res.send(error)
     }

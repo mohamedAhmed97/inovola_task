@@ -9,18 +9,18 @@ const schema = new mongoose.Schema({
     },
     coffee_flavor: {
         type: String,
-        enum: ['caramel', 'psl', 'mocha', 'hazelnut', 'mocha'],
+        enum: ['caramel', 'psl', 'mocha', 'hazelnut', 'mocha','vanilla'],
         required: true
 
     },
     product_type: {
         type: String,
-        enum: ['large coffee pod', 'small coffee pod', 'espresso coffee pod'],
+        enum: ['large coffee pod', 'small coffee pod', 'espresso pod'],
         required: true
     },
     pack_size: {
         type: String,
-        enum: ['1 dozen', '3 small dozen', '5 espresso dozen', '7 dozen'],
+        enum: ['1 dozen', '3 dozen', '5 dozen', '7 dozen'],
         required: true
     }
 
