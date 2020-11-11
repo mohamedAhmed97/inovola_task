@@ -1,17 +1,9 @@
 const express = require('express')
 const router = new express.Router()
-//coffemachine model
-const CoffeeMachine = require('../database/models/CoffeeMachine')
+//coffemachine controller
+const CoffeeMachineController=require('../controllers/CoffeeMachineController');
 
-router.post('/users', async (req, res) => {
-    const coffemachine = new CoffeeMachine(req.body);
-    try {
-        await coffemachine.save();
-        res.status(201).send({ coffemachine });
+router.post('/coffee_machines/seeds',CoffeeMachineController.seedCoffeeMachine);
 
-    } catch (error) {
-        res.status(202).send(error);
-    }
-})
-
+router.get('/coffee_machines',CoffeeMachineController.index)
 module.exports = router;
