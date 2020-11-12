@@ -35,7 +35,7 @@ If You Want To filter Data:
 
 For Coffee Machines:
 ---------------------
-    url : localhost:3000/api/coffee-pods
+    url : localhost:3000/api/coffee-machines
     queryString for filter:
     -------------------------
         -product_model
