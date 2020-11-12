@@ -40,6 +40,7 @@ For Coffee Machines:
     -------------------------
         -product_model
         -product_type
+        -water_line_compatible
     Ex:localhost:3000/api/coffee-machines?product_type=small machine&product_model=base model
 
 
